@@ -1,10 +1,10 @@
 ## Instalacion
-https://docs.astro.build/es/guides/integrations-guide/tailwind/
+https://docs.astro.build/es/guides/integrations-guide/tailwind/ <br>
 ![instalacion](resources/instalacion.png)
 > npx astro add tailwind
 
 ## DaisyUI
-https://daisyui.com/docs/install/
+https://daisyui.com/docs/install/ <br>
 ![daisyUI](resources/daisyUI.png)
 > npm i -D daisyui@latest <br>
 > require('daisyui'),
