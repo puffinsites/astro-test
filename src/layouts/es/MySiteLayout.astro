@@ -1,6 +1,7 @@
 ---
 import BaseHead from '../../components/es/BaseHead.astro';
 import Footer from '../../components/es/Footer.astro';
+import { ViewTransitions } from 'astro:transitions';
 const { title } = Astro.props;
 ---
 <html lang="es">
@@ -9,6 +10,7 @@ const { title } = Astro.props;
     <meta name="description" content="Descripción del sitio PuffinSitess.org">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <ViewTransitions />
   </head>
   <BaseHead title={title} />
   <body>
