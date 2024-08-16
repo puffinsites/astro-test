@@ -1,0 +1,70 @@
+---
+import BaseHead from '../../components/es/BaseHead.astro';
+import Footer from '../../components/es/Footer.astro';
+const { title } = Astro.props;
+---
+<html lang="es">
+  <head>
+    <title>PuffinSitess.org</title>
+    <meta name="description" content="Descripción del sitio PuffinSitess.org">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  </head>
+  <BaseHead title={title} />
+  <body>
+    <article>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 grid-rows-1 gap-4  items-center justify-center relative mt-16">
+        <div class="animate-fade-right flex justify-star">
+          <div class="mockup-phone shadow-2xl">
+            <div class="camera"></div>
+            <div class="display">
+              <div class="artboard artboard-demo phone-1">
+              <div class="chat w-full chat-start ms-8 mb-16">
+                <div class="chat-image avatar">
+                  <div class="w-10 rounded-full">
+                  <img
+                    alt="Tailwind CSS chat bubble component"
+                    src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                  </div>
+                </div>
+                <div class="chat-header">
+                  Obi-Wan Kenobi
+                  <time class="text-xs opacity-50">12:45</time>
+                </div>
+                <div class="chat-bubble">Responsive?</div>
+                <div class="chat-footer opacity-50">Delivered</div>
+                </div>
+                <div class="chat w-full chat-end me-8">
+                <div class="chat-image avatar">
+                  <div class="w-10 rounded-full">
+                  <img
+                    alt="Tailwind CSS chat bubble component"
+                    src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                  </div>
+                </div>
+                <div class="chat-header">
+                  Anakin
+                  <time class="text-xs opacity-50">12:46</time>
+                </div>
+                <div class="chat-bubble">Sure!</div>
+                <div class="chat-footer opacity-50">Seen at 12:46</div>
+                </div>
+              </div>
+            </div>
+            </div>
+        </div>
+        <div class="animate-fade-left flex justify-end text-3xl font-mono me-32">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo recusandae maxime expedita in at eum nesciunt nobis vero, quia sit ipsa fugit animi. Labore, aliquam! Quidem voluptas aut recusandae earum.
+        </div>
+    
+      </div>
+      <slot /> <!-- tu contenido es inyectado aquí -->
+    </article>
+    <Footer />
+  </body>
+  <style>
+    h1 {
+      font-size: 2rem;
+    }
+  </style>
+</html>

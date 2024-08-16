@@ -1,0 +1,37 @@
+---
+import LanguagePicker from '../LanguagePicker.astro';
+---
+<div class="navbar bg-info">
+  <div class="ml-auto">
+    <LanguagePicker />
+  </div>
+</div>
+
+<div class="hero bg-info pt-8 min-h-18">
+  <div class="hero-content flex-col lg:flex-row">
+    <img
+    src="/img/frailecillo.png" class="max-h-60"/>
+    <div>
+      <h1 class="text-5xl font-bold">¡Noticias de taquilla!</h1>
+      <p class="py-6">
+      Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
+      quasi. In deleniti eaque aut repudiandae et a id nisi.
+      </p>
+      <button class="btn btn-outline" onclick="my_modal_1.showModal()">Empezar</button>				
+      <dialog id="my_modal_1" class="modal">
+      <div class="modal-box">
+        <h3 class="text-lg font-bold">Hola!</h3>
+        <p class="py-4">Presione la tecla ESC o haga clic en el botón de abajo para cerrar</p>
+        <div class="modal-action">
+        <form method="dialog">
+          <!-- if there is a button in form, it will close the modal -->
+          <button class="btn">Close</button>
+        </form>
+        </div>
+      </div>
+      </dialog>
+    </div>
+  </div>
+</div>
+
+<img class="w-full" src="/img/wave-haikei.svg" alt="image description">
