@@ -4,11 +4,5 @@ export default {
 	theme: {
 		extend: {},
 	},
-	daisyui: {
-		themes: ["lofi", "lofi", "lofi"],
-	},
-	plugins: [
-		require('daisyui'),
-		require('tailwindcss-animated')
-	],
+	plugins: [],
 }
