@@ -1,0 +1,17 @@
+---
+import { languages } from '../i18n/ui';
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+<div class="text-end p-5">
+    <span>
+        {t('web.language')}
+    </span>
+    <ul>
+      {Object.entries(languages).map(([lang, label]) => (
+        <a href={`/${lang}/`}> | {label}</a>
+      ))}
+    </ul>
+</div>
