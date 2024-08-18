@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import Card from '../../components/Card.astro';
 import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import Footer from '../../components/Footer.astro';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -42,8 +43,67 @@ const t = useTranslations(lang);
 			To get started, open the directory <code>src/pages</code> in your project.<br />
 			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
 		</p>
-		<a href="/test">test</a>
-		<ul role="list" class="link-card-grid">
+		<!-- Open the modal using ID.showModal() method -->
+		<button class="btn mb-6" onclick="my_modal_1.showModal()">Open modal</button>
+		<dialog id="my_modal_1" class="modal">
+		<div class="modal-box">
+			<h3 class="text-lg font-bold">Hello!</h3>
+			<p class="py-4">Press ESC key or click the button below to close</p>
+			<div class="modal-action">
+			<form method="dialog">
+				<!-- if there is a button in form, it will close the modal -->
+				<button class="btn">Close</button>
+			</form>
+			</div>
+		</div>
+		</dialog>
+		<ul role="list" class="link-card-grid animate-fade-right">
+			<Card
+				href="https://docs.astro.build/"
+				title="Documentation"
+				body="Learn how Astro works and explore the official API docs."
+			/>
+			<Card
+				href="https://astro.build/integrations/"
+				title="Integrations"
+				body="Supercharge your project with new frameworks and libraries."
+			/>
+			<Card
+				href="https://astro.build/themes/"
+				title="Themes"
+				body="Explore a galaxy of community-built starter themes."
+			/>
+			<Card
+				href="https://astro.build/chat/"
+				title="Community"
+				body="Come say hi to our amazing Discord community. ❤️"
+			/>
+		</ul>
+		<div class="divider divider-info mt-12">Cards</div>
+		<ul role="list" class="link-card-grid animate-fade-left mt-12">
+			<Card
+				href="https://docs.astro.build/"
+				title="Documentation"
+				body="Learn how Astro works and explore the official API docs."
+			/>
+			<Card
+				href="https://astro.build/integrations/"
+				title="Integrations"
+				body="Supercharge your project with new frameworks and libraries."
+			/>
+			<Card
+				href="https://astro.build/themes/"
+				title="Themes"
+				body="Explore a galaxy of community-built starter themes."
+			/>
+			<Card
+				href="https://astro.build/chat/"
+				title="Community"
+				body="Come say hi to our amazing Discord community. ❤️"
+			/>
+		</ul>
+		<div class="divider divider-info mt-12">Cards</div>
+		<ul role="list" class="link-card-grid animate-fade-right mt-12">
 			<Card
 				href="https://docs.astro.build/"
 				title="Documentation"
@@ -66,6 +126,7 @@ const t = useTranslations(lang);
 			/>
 		</ul>
 	</main>
+	<Footer/>
 </Layout>
 
 <style>

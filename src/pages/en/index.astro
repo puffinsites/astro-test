@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import Card from '../../components/Card.astro';
 import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import Footer from '../../components/Footer.astro';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -42,7 +43,9 @@ const t = useTranslations(lang);
 			To get started, open the directory <code>src/pages</code> in your project.<br />
 			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
 		</p>
-		<a href="/test">test</a>
+		<a href="test" class="mb-6">
+			<button class="btn mb-6">Button</button>
+		</a>
 		<ul role="list" class="link-card-grid">
 			<Card
 				href="https://docs.astro.build/"
@@ -66,6 +69,7 @@ const t = useTranslations(lang);
 			/>
 		</ul>
 	</main>
+	<Footer/>
 </Layout>
 
 <style>
