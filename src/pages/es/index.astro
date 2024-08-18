@@ -9,6 +9,7 @@ const t = useTranslations(lang);
 ---
 
 <Layout title="Welcome to Astro.">
+	<script defer src="https://unpkg.com/tailwindcss-intersect@2.x.x/dist/observer.min.js"></script>
 	<main>
 		<svg
 			class="astro-a"
@@ -57,7 +58,7 @@ const t = useTranslations(lang);
 			</div>
 		</div>
 		</dialog>
-		<ul role="list" class="link-card-grid animate-fade-right">
+		<ul role="list" class="link-card-grid duration-700 intersect-once -translate-x-1/3 intersect:translate-x-0 transition mt-12">
 			<Card
 				href="https://docs.astro.build/"
 				title="Documentation"
@@ -80,7 +81,7 @@ const t = useTranslations(lang);
 			/>
 		</ul>
 		<div class="divider divider-info mt-12">Cards</div>
-		<ul role="list" class="link-card-grid animate-fade-left mt-12">
+		<ul role="list" class="link-card-grid duration-700 intersect-once translate-x-1/3 intersect:translate-x-0 transition">
 			<Card
 				href="https://docs.astro.build/"
 				title="Documentation"
@@ -103,7 +104,7 @@ const t = useTranslations(lang);
 			/>
 		</ul>
 		<div class="divider divider-info mt-12">Cards</div>
-		<ul role="list" class="link-card-grid animate-fade-right mt-12">
+		<ul role="list" class="link-card-grid intersect-once duration-700 -translate-x-1/3 intersect:translate-x-0 transition mt-12">
 			<Card
 				href="https://docs.astro.build/"
 				title="Documentation"
