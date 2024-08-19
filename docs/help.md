@@ -15,3 +15,10 @@ https://www.tailwindcss-animated.com/ <br>
 ![tailwind](resources/tailwind.png)
 > npm i tailwindcss-animated <br>
 > require('tailwindcss-animated') 
+
+## CookieConsent
+https://github.com/orestbida/cookieconsent <br>
+Ejemplo: https://stackblitz.com/edit/withastro-astro-mvdsyj <br>
+> npm i vanilla-cookieconsent@3.0.1
+
+revisar si existen versiones mas nuevas

@@ -2,6 +2,7 @@
 import LanguagePicker from '../components/LanguagePicker.astro';
 import { ViewTransitions } from 'astro:transitions';
 import { getLangFromUrl } from '../i18n/utils';
+import CookieConsent from '../components/CookieConsent/CookieConsent.astro';
 
 
 const lang = getLangFromUrl(Astro.url);
@@ -29,6 +30,7 @@ const { title } = Astro.props;
 			<LanguagePicker />
 		</header>
 		<slot />
+		<CookieConsent />
 	</body>
 </html>
 <style is:global>
