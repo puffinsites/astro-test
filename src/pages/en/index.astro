@@ -1,11 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Card from '../../components/Card.astro';
-import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 import Footer from '../../components/Footer.astro';
-
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
 ---
 
 <Layout title="Welcome to Astro.">
@@ -38,7 +34,7 @@ const t = useTranslations(lang);
 				</linearGradient>
 			</defs>
 		</svg>
-		<h1>{t('index.home')} <span class="text-gradient">Astro</span>!</h1>
+		<h1>Welcome to <span class="text-gradient">Astro</span>!</h1>
 		<p class="instructions">
 			To get started, open the directory <code>src/pages</code> in your project.<br />
 			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
