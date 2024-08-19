@@ -1,12 +1,12 @@
 ---
 import { languages } from '../i18n/ui';
-import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import { getLangFromUrl } from '../i18n/utils';
 
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
+const langURL = getLangFromUrl(Astro.url);
+const currentPath = Astro.url.pathname;
 ---
 <div class="float-right p-5">
-  {Object.entries(languages).filter((lan) => lan[0] != lang).map(([lang, label]) => (
-    <a href={`/${lang}/`}><img class="" src={`/img/${lang}.png`} alt={`${label}`}></a>
+  {Object.entries(languages).filter((lan) => lan[0] != langURL).map(([lang, label]) => (
+    <a href={`/${lang}${currentPath.replace("/"+langURL, "")}`}><img class="" src={`/img/${lang}.png`} alt={`${label}`}></a>
   ))}
 </div>
