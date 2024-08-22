@@ -16,6 +16,11 @@ pipeline {
                 }
             }
         }
+        stage('Copy files to nginx') {
+            steps {
+                sh 'mkdir -p /jenkins_exports/astro-test && cp -r dist/* /jenkins_exports/astro-test/'
+            }
+        }
     }
     post {
         always {
